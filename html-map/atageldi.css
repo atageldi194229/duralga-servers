@@ -1,0 +1,398 @@
+/**
+ * Copyright 2022 Deni Docc
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    font-family: 'Comfortaa', cursive;
+    user-select: none;
+}
+
+.right_side_bar {
+    position: relative;
+    position: fixed;
+    right: 0;
+    width: 30rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    padding: 0.5rem;
+    z-index: 10000;
+    transition: all 0.4s ease;
+}
+
+.open_sidebar {
+    position: absolute;
+    left: -3rem;
+    background-color: #3e9adb;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.diactivated {
+    opacity: 0;
+    z-index: -101rem;
+}
+
+.bus_list_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 4rem;
+    transition: all 0.4s ease;
+}
+
+.back_btn,
+.close_btn {
+    padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+    background-color: #3e9adb;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+}
+
+.close_btn {
+    position: absolute;
+    right: 0.5rem;
+}
+
+.bus_route_form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.bus_list_container .bus_route_form {
+    margin-top: 3rem;
+}
+
+#bus_route_search {
+    width: 90%;
+    height: 2.35rem;
+    border-radius: 12px;
+    border: none;
+    padding: 0 0.5rem;
+    font-family: 'Comfortaa', cursive;
+}
+
+.bx-search-alt-2 {
+    background-color: #3e9adb;
+    color: #fff;
+    font-size: 1.75rem;
+    padding: 0.3rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.bus_stop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.bus_stop h3 {
+    color: #fff;
+    background-color: #3e9adb;
+    padding: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    margin-left: 3rem;
+    margin-top: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.bxs-bus {
+    position: absolute;
+    background-color: #3e9adb;
+    color: #fff;
+    font-size: 1.75rem;
+    padding: 0.3rem;
+    border-radius: 10px;
+    margin-top: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.my_way {
+    border: 1px solid gold;
+    color: gold;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    padding: 0.3rem;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    user-select: none;
+}
+
+.bus_list_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.bus_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.buses_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    color: #fff;
+    background-color: #3e9adb;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.bus_destination {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 12rem;
+    color: #fff;
+}
+
+.bus_destination i {
+    margin: 0 5px;
+}
+
+.bus_time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.bus_arr_time {
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    width: 1.5rem;
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.bxs-right-arrow {
+    font-size: 0.5rem;
+}
+
+.bus_schedule {
+    margin-top: 1rem;
+    width: 100%;
+    height: 59%;
+    overflow-y: scroll;
+}
+
+.bus_schedule::-webkit-scrollbar {
+    width: 0;
+}
+
+.bus_schedule .bus_info .bus_destination {
+    width: 18rem;
+}
+
+.bus_schedule .bus_info .bus_time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+    height: 100%;
+}
+
+.busstops_container {
+    margin-top: 1rem;
+    position: absolute;
+    top: 100%;
+    width: 97%;
+    height: 95%;
+    transition: all 0.4s ease;
+}
+
+.bus_route_stops {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    padding: 1rem 0;
+    margin-bottom: 0.5rem;
+}
+
+.bus_route_stops .bxs-bus {
+    position: relative;
+    margin-top: 0;
+}
+
+.bus_route_stops .buses_list {
+    margin: 0.15rem 0.5rem;
+}
+
+.bus_stop_from_to {
+    width: 21rem;
+    overflow-x: hidden;
+}
+
+.bus_stop_from_to i {
+    font-size: 1rem;
+}
+
+.bus_route_stops .bx-star {
+    font-size: 1.5rem;
+    color: gold;
+    position: absolute;
+    right: 0;
+    top: 1.45rem;
+    cursor: pointer;
+}
+
+.all_stops {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    height: 81.5%;
+}
+
+.stops {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow-y: scroll;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    height: 95%;
+    width: 100%;
+}
+
+.stops::-webkit-scrollbar {
+    width: 0;
+}
+
+.per_stop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    position: relative;
+    width: 95%;
+    min-height: 2rem;
+}
+
+.black_border i {
+    position: absolute;
+    left: -0.63rem;
+    top: -0.2rem;
+}
+
+.per_stop p {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.black_border {
+    border-left: 5px solid black !important;
+}
+
+.blue_border i {
+    color: #3e9adb;
+    position: absolute;
+    left: -0.63rem;
+    top: -0.2rem;
+}
+
+.blue_border {
+    border-left: 5px solid #3e9adb !important;
+}
+
+.stop_time_left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.stop_time_left .bus_arr_time {
+    margin-left: 2.5rem;
+}
+
+.stop_time_left p {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#time_bus {
+    position: absolute;
+    font-size: 1.2rem;
+    color: #000;
+    left: 0.8rem;
+    top: 2.3rem;
+    font-size: 1.5rem;
+}
+
+.active_stop {
+    min-height: 5rem;
+}
+
+.last_stop {
+    border-left: none !important;
+    margin-left: 5px;
+}

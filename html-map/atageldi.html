@@ -1,0 +1,634 @@
+<!--
+ Copyright 2022 Deni Docc
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="atageldi.css" />
+    <link rel="stylesheet" href="boxicons.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Duralga</title>
+  </head>
+
+  <body>
+    <div class="right_side_bar">
+      <button class="open_sidebar diactivated">
+        <i class="bx bx-menu-alt-right"></i>
+      </button>
+
+      <div class="bus_list_container">
+        <button class="close_btn">
+          <i class="bx bx-x"></i>
+        </button>
+
+        <form class="bus_route_form">
+          <i class="bx bx-search-alt-2"></i>
+          <input
+            type="search"
+            placeholder="Ugur gözle"
+            name=""
+            id="bus_route_search"
+          />
+        </form>
+
+        <div class="bus_stop">
+          <i class="bx bxs-bus"></i>
+
+          <h3>Aýtakow duralgasy</h3>
+
+          <p id="belle" class="my_way"><i class="bx bx-star"></i>Belle</p>
+        </div>
+
+        <div class="bus_list_box">
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <i class="bx bxs-right-arrow"></i>
+
+              <span class="bus_arr_time">20</span>
+
+              <i class="bx bxs-right-arrow"></i>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">:routeNumber</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span>:routeDescriptionA</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>:routeDescriptionB</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">:arrivalTime1</span>
+
+              <i class="bx bxs-right-arrow"></i>
+
+              <span class="bus_arr_time">:arrivalTime2</span>
+
+              <i class="bx bxs-right-arrow"></i>
+
+              <span class="bus_arr_time">:arrivalTime3</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">73</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span>Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <i class="bx bxs-right-arrow"></i>
+
+              <span class="bus_arr_time">20</span>
+
+              <i class="bx bxs-right-arrow"></i>
+
+              <span class="bus_arr_time">--</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bus_schedule">
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">102</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+
+          <div class="bus_info">
+            <p class="buses_list">10</p>
+
+            <div class="bus_destination">
+              <marquee loop="-1">
+                <span> Teke bazar</span>
+                <i class="bx bx-right-arrow-alt"></i>
+                <span>Parahat 7</span>
+              </marquee>
+            </div>
+
+            <div class="bus_time">
+              <span class="bus_arr_time">10</span>
+
+              <span>:</span>
+
+              <span class="bus_arr_time">20</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="busstops_container">
+        <button class="back_btn">
+          <i class="bx bx-left-arrow-alt"></i>
+        </button>
+
+        <button class="close_btn">
+          <i class="bx bx-x"></i>
+        </button>
+
+        <form class="bus_route_form">
+          <i class="bx bx-search-alt-2"></i>
+          <input
+            type="search"
+            placeholder="Ugur gözle"
+            name=""
+            id="bus_route_search"
+          />
+        </form>
+
+        <div class="bus_route_stops">
+          <i class="bx bxs-bus"></i>
+
+          <p class="buses_list">102</p>
+
+          <div class="bus_stop_from_to">
+            <h3><i class="bx bxs-right-arrow"></i>Teke Bazar</h3>
+            <p>Parahat 7</p>
+          </div>
+
+          <i id="one-bus-star" class="bx bx-star"></i>
+        </div>
+
+        <div class="all_stops">
+          <p>Duralgalar</p>
+
+          <div class="stops">
+            <div class="per_stop black_border">
+              <i class="bx bxs-circle"></i>
+              <p>1-nji duralga</p>
+            </div>
+
+            <div class="per_stop black_border">
+              <i class="bx bxs-circle"></i>
+              <p>1-nji duralga</p>
+            </div>
+
+            <div class="per_stop black_border">
+              <i class="bx bxs-circle"></i>
+              <p>1-nji duralga</p>
+            </div>
+
+            <div class="per_stop black_border">
+              <i class="bx bxs-circle"></i>
+              <p>1-nji duralga</p>
+            </div>
+
+            <div class="per_stop black_border">
+              <i class="bx bxs-circle"></i>
+              <p>1-nji duralga</p>
+            </div>
+
+            <div class="per_stop black_border">
+              <i class="bx bxs-circle"></i>
+              <p>1-nji duralga</p>
+            </div>
+
+            <div class="per_stop black_border">
+              <i class="bx bxs-circle"></i>
+              <p>1-nji duralga</p>
+            </div>
+
+            <div class="per_stop black_border">
+              <i class="bx bxs-circle"></i>
+              <p>1-nji duralga</p>
+            </div>
+
+            <div class="per_stop active_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>Awtobusyn shuwagtky barjak duralgasy</p>
+
+              <div class="stop_time_left">
+                <i id="time_bus" class="bx bx-bus"></i>
+                <span class="bus_arr_time">10</span>
+                <p>minut</p>
+              </div>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>indiki duralga</p>
+            </div>
+
+            <div class="per_stop blue_border">
+              <i class="bx bxs-circle"></i>
+              <p>ind duralga</p>
+            </div>
+
+            <div class="per_stop blue_border last_stop">
+              <i class="bx bxs-circle"></i>
+              <p>sonky duralga</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="atageldi.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "params": [
+    {
+      "svc": "item/update_custom_property",
+      "params": { "itemId": 5905, "name": "mont", "value": 0 }
+    },
+    {
+      "svc": "item/update_custom_property",
+      "params": { "itemId": 5905, "name": "monugv", "value": "[]" }
+    }
+  ],
+  "flags": 0
+}
